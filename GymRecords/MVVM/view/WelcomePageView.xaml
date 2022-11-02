@@ -1,0 +1,99 @@
+﻿<UserControl x:Class="GymRecords.MVVM.view.WelcomePageView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GymRecords.MVVM.view"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.Background>
+            <RadialGradientBrush>
+                <GradientStop Color="#FF09292E" Offset="1"/>
+                <GradientStop Color="#FF0D4444" Offset="0"/>
+            </RadialGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Name="LoginPanel" Grid.Column="0">
+            <TextBlock Text="Username:" Foreground="White" FontWeight="ExtraBold" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,70,0,0"></TextBlock>
+            <TextBox Foreground="#FF09292E" Width="250" Height="25" FontWeight="ExtraBold" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"></TextBox>
+            <TextBlock Text="Password:" Foreground="White" FontWeight="ExtraBold" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"/>
+            <PasswordBox Foreground="#FF09292E" Width="250" Height="25" FontWeight="ExtraBold" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"></PasswordBox>
+            <Button Content="Submit" Height="40" Width="150" FontWeight="ExtraBold" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"></Button>
+        </StackPanel>
+
+        <StackPanel Name="RegisterPanel" Grid.Column="1">
+            <TextBlock Text="Full name:" Foreground="White" FontWeight="ExtraBold" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,70,0,0"></TextBlock>
+            <TextBox Foreground="#FF09292E" Name="FullNameBoxRegister"  Width="250" Height="25" FontWeight="ExtraBold" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"/>
+            <TextBlock Text="Username:" Foreground="White" FontWeight="ExtraBold" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"></TextBlock>
+            <TextBox Foreground="#FF09292E" Name="UsernameBoxRegister" Width="250" Height="25" FontWeight="ExtraBold" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"></TextBox>
+            <TextBlock Text="Password:" Foreground="White" FontWeight="ExtraBold" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"/>
+            <PasswordBox Foreground="#FF09292E" Name="PasswordBoxRegister" Width="250" Height="25" FontWeight="ExtraBold" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"></PasswordBox>
+            <Button Content="Submit" Height="40" Width="150" FontWeight="ExtraBold" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"></Button>
+
+        </StackPanel>
+
+
+        <TextBlock x:Name="LoginText" Grid.Column="0" Text="Login" HorizontalAlignment="Center" 
+                   VerticalAlignment="Top" FontSize="60" Foreground="White" Width="100" 
+                   FontWeight="DemiBold" FontFamily="Palace Script MT">
+            <TextBlock.Triggers>
+                <EventTrigger RoutedEvent="TextBlock.MouseEnter">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation
+            Storyboard.TargetName="LoginText" 
+            Storyboard.TargetProperty="(TextBlock.Width)"
+            To="200.0" Duration="0:0:0.5" 
+            AutoReverse="True" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="TextBlock.MouseLeave">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation
+            Storyboard.TargetName="LoginText" 
+            Storyboard.TargetProperty="(TextBlock.Width)"
+            To="100.0" Duration="0:0:0.5" 
+             />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </TextBlock.Triggers>
+        </TextBlock>
+
+        <TextBlock x:Name="RegisterText" Grid.Column="1" Text="Register" HorizontalAlignment="Center" 
+                   VerticalAlignment="Top" FontSize="60" Foreground="White" Width="140"
+                   FontWeight="DemiBold" FontFamily="Palace Script MT">
+            <TextBlock.Triggers>
+                <EventTrigger RoutedEvent="TextBlock.MouseEnter">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation
+            Storyboard.TargetName="RegisterText" 
+            Storyboard.TargetProperty="(TextBlock.Width)"
+            To="250.0" Duration="0:0:0.5" 
+            AutoReverse="True" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="TextBlock.MouseLeave">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation
+            Storyboard.TargetName="RegisterText" 
+            Storyboard.TargetProperty="(TextBlock.Width)"
+            To="140.0" Duration="0:0:0.5" 
+             />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </TextBlock.Triggers>
+        </TextBlock>
+    </Grid>
+</UserControl>

@@ -1,0 +1,40 @@
+﻿<Application x:Class="GymRecords.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:GymRecords"
+             xmlns:view="clr-namespace:GymRecords.MVVM.view"
+             xmlns:vms="clr-namespace:GymRecords.MVVM.viewmodel"
+             StartupUri="MVVM/View/MainWindow.xaml">
+    
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!--Themes-->
+                <ResourceDictionary Source="/Themes/TitleBarButton.Nord.xaml"/>
+                <ResourceDictionary Source="/Themes/MenuButton.xaml"/>
+                <ResourceDictionary Source="/Themes/ListViewCustom.xaml"/>
+
+            </ResourceDictionary.MergedDictionaries>
+
+            <DataTemplate DataType="{x:Type vms:WelcomePageViewModel}">
+                <view:WelcomePageView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vms:HomeViewModel}">
+                <view:HomeView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vms:WorkoutViewModel}">
+                <view:WorkoutView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vms:RecordsViewModel}">
+                <view:RecordsView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vms:PlanViewModel}">
+                <view:PlanView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vms:LearnYourselfViewModel}">
+                <view:LearnYourselfView/>
+            </DataTemplate>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

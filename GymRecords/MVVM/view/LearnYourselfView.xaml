@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="GymRecords.MVVM.view.LearnYourselfView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GymRecords.MVVM.view"
+             mc:Ignorable="d" 
+             d:DesignHeight="850" d:DesignWidth="1200">
+    <UserControl.Background>
+        <RadialGradientBrush>
+            <GradientStop Color="#FF09292E" Offset="1"/>
+            <GradientStop Color="#FF0D4444" Offset="0"/>
+        </RadialGradientBrush>
+    </UserControl.Background>
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <TextBlock  Text="'The only true wisdom&#10; is in knowing you know nothing.'&#10;- Socrates"  Foreground="White" FontSize="40" FontWeight="Heavy" Margin="0,0,0,-35"></TextBlock>
+        <Ellipse Fill="Black" Width="700" Height="90" Margin="0,70,0,0" Opacity="0.6">
+            <Ellipse.Effect>
+                <BlurEffect Radius="95"/>
+            </Ellipse.Effect>
+        </Ellipse>
+    </StackPanel>
+    <!--<Border BorderBrush="Black" BorderThickness="1" Grid.Column="1" Grid.Row="2">
+        <WebBrowser Source="http:\\www.google.com"/>
+    </Border>-->
+    
+</UserControl>

@@ -1,0 +1,172 @@
+﻿<UserControl x:Class="GymRecords.MVVM.view.PlanView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GymRecords.MVVM.view"
+             mc:Ignorable="d" 
+             d:DesignHeight="850" d:DesignWidth="1200">
+
+    <Grid Name="grid">
+        <Grid.Background>
+            <RadialGradientBrush>
+                <GradientStop Color="#FF09292E" Offset="1"/>
+                <GradientStop Color="#FF0D4444" Offset="0"/>
+            </RadialGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="90"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="150"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" FontWeight="ExtraBold" Text="Workout/Cardio" Foreground="White" FontSize="10" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Cardio?" Foreground="White" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Workout?" Foreground="White" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+
+
+        <TextBlock Grid.Row="0" Grid.Column="1" Text="Monday" FontWeight="ExtraBold" Foreground="White" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <TextBlock Grid.Row="0" Grid.Column="2" Text="Tuesday" FontWeight="ExtraBold" Foreground="White" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <TextBlock Grid.Row="0" Grid.Column="3" Text="Wednesday" FontWeight="ExtraBold" Foreground="White" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <TextBlock Grid.Row="0" Grid.Column="4" Text="Thursday" FontWeight="ExtraBold" Foreground="White" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <TextBlock Grid.Row="0" Grid.Column="5" Text="Friday" FontWeight="ExtraBold" Foreground="White" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <TextBlock Grid.Row="0" Grid.Column="6" Text="Saturday" FontWeight="ExtraBold" Foreground="White" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <TextBlock Grid.Row="0" Grid.Column="7" Text="Sunday" FontWeight="ExtraBold" Foreground="White" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+
+        <Button Grid.Column="7" FontWeight="Bold" Grid.Row="3" Content="Save" FontSize="20" Width="150" Height="40" Foreground="White" Click="Button_Click">
+
+        </Button>
+        <Button Grid.Column="1" FontWeight="Bold" Grid.Row="3" Content="See Plan" FontSize="20" Width="150" Height="NaN" Foreground="White" IsEnabled="True" Grid.ColumnSpan="2" Margin="4,5,146,5" Click="Button_Click_2">
+            <!--Save the filepath of the plan in the database and open the plan image by clicking this button-->
+        </Button>
+
+
+        <ComboBox x:Name="MondayR1C1" Grid.Row="1" Grid.Column="1" FontWeight="Bold" Height="20" Width="50" VerticalAlignment="Top" SelectionChanged="ComboBox_SelectionChanged">
+            <ComboBoxItem Content="Yes" Foreground="Green"/>
+            <ComboBoxItem Content="No"  Foreground="Red" />
+            <ComboBoxItem Content=" "/>
+        </ComboBox>
+        <ComboBox x:Name="MondayR2C1" Grid.Row="2" Grid.Column="1" FontWeight="Bold" Height="20" Width="50" VerticalAlignment="Top" SelectionChanged="ComboBox_SelectionChanged">
+            <ComboBoxItem Content="Yes" Foreground="Green"/>
+            <ComboBoxItem Content="No"  Foreground="Red"/>
+            <ComboBoxItem Content=" "/>
+        </ComboBox>
+        <ComboBox x:Name="TuesdayR1C2" Grid.Row="1" Grid.Column="2" FontWeight="Bold" Height="20" Width="50" VerticalAlignment="Top" SelectionChanged="ComboBox_SelectionChanged" >
+            <ComboBoxItem Content="Yes" Foreground="Green"/>
+            <ComboBoxItem Content="No"  Foreground="Red"/>
+            <ComboBoxItem Content=" "/>
+        </ComboBox>
+        <ComboBox x:Name="TuesdayR2C2" Grid.Row="2" Grid.Column="2" FontWeight="Bold" Height="20" Width="50" VerticalAlignment="Top" SelectionChanged="ComboBox_SelectionChanged" >
+            <ComboBoxItem Content="Yes" Foreground="Green"/>
+            <ComboBoxItem Content="No"  Foreground="Red"/>
+            <ComboBoxItem Content=" "/>
+        </ComboBox>
+        <ComboBox x:Name="WednesdayR1C3" Grid.Row="1" Grid.Column="3" FontWeight="Bold" Height="20" Width="50" VerticalAlignment="Top" SelectionChanged="ComboBox_SelectionChanged" >
+            <ComboBoxItem Content="Yes" Foreground="Green"/>
+            <ComboBoxItem Content="No"  Foreground="Red"/>
+            <ComboBoxItem Content=" "/>
+        </ComboBox>
+        <ComboBox x:Name="WednesdayR2C3" Grid.Row="2" Grid.Column="3" FontWeight="Bold" Height="20" Width="50" VerticalAlignment="Top" SelectionChanged="ComboBox_SelectionChanged" >
+            <ComboBoxItem Content="Yes" Foreground="Green"/>
+            <ComboBoxItem Content="No"  Foreground="Red"/>
+            <ComboBoxItem Content=" "/>
+        </ComboBox>
+        <ComboBox x:Name="ThursdayR1C4" Grid.Row="1" Grid.Column="4" FontWeight="Bold" Height="20" Width="50" VerticalAlignment="Top" SelectionChanged="ComboBox_SelectionChanged" >
+            <ComboBoxItem Content="Yes" Foreground="Green"/>
+            <ComboBoxItem Content="No"  Foreground="Red"/>
+            <ComboBoxItem Content=" "/>
+        </ComboBox>
+        <ComboBox x:Name="ThursdayR2C4" Grid.Row="2" Grid.Column="4" FontWeight="Bold" Height="20" Width="50" VerticalAlignment="Top" SelectionChanged="ComboBox_SelectionChanged" >
+            <ComboBoxItem Content="Yes" Foreground="Green"/>
+            <ComboBoxItem Content="No"  Foreground="Red"/>
+            <ComboBoxItem Content=" "/>
+        </ComboBox>
+        <ComboBox x:Name="FridayR1C5" Grid.Row="1" Grid.Column="5" FontWeight="Bold" Height="20" Width="50" VerticalAlignment="Top" SelectionChanged="ComboBox_SelectionChanged" >
+            <ComboBoxItem Content="Yes" Foreground="Green"/>
+            <ComboBoxItem Content="No"  Foreground="Red"/>
+            <ComboBoxItem Content=" "/>
+        </ComboBox>
+        <ComboBox x:Name="FridayR2C5" Grid.Row="2" Grid.Column="5" FontWeight="Bold" Height="20" Width="50" VerticalAlignment="Top" SelectionChanged="ComboBox_SelectionChanged" >
+            <ComboBoxItem Content="Yes" Foreground="Green"/>
+            <ComboBoxItem Content="No"  Foreground="Red"/>
+            <ComboBoxItem Content=" "/>
+        </ComboBox>
+        <ComboBox x:Name="SaturdayR1C6" Grid.Row="1" Grid.Column="6" FontWeight="Bold" Height="20" Width="50" VerticalAlignment="Top" SelectionChanged="ComboBox_SelectionChanged" >
+            <ComboBoxItem Content="Yes" Foreground="Green"/>
+            <ComboBoxItem Content="No"  Foreground="Red"/>
+            <ComboBoxItem Content=" "/>
+        </ComboBox>
+        <ComboBox x:Name="SaturdayR2C6" Grid.Row="2" Grid.Column="6" FontWeight="Bold" Height="20" Width="50" VerticalAlignment="Top" SelectionChanged="ComboBox_SelectionChanged" >
+            <ComboBoxItem Content="Yes" Foreground="Green"/>
+            <ComboBoxItem Content="No"  Foreground="Red"/>
+            <ComboBoxItem Content=" "/>
+        </ComboBox>
+        <ComboBox x:Name="SundayR1C7" Grid.Row="1" Grid.Column="7" FontWeight="Bold" Height="20" Width="50" VerticalAlignment="Top" SelectionChanged="ComboBox_SelectionChanged" >
+            <ComboBoxItem Content="Yes" Foreground="Green"/>
+            <ComboBoxItem Content="No"  Foreground="Red"/>
+            <ComboBoxItem Content=" "/>
+        </ComboBox>
+        <ComboBox x:Name="SundayR2C7" Grid.Row="2" Grid.Column="7" FontWeight="Bold" Height="20" Width="50" VerticalAlignment="Top" SelectionChanged="ComboBox_SelectionChanged" >
+            <ComboBoxItem Content="Yes" Foreground="Green"/>
+            <ComboBoxItem Content="No"  Foreground="Red"/>
+            <ComboBoxItem Content=" "/>
+        </ComboBox>
+
+        <Border BorderBrush="White" BorderThickness="1" Grid.Row="0" Grid.Column="0"></Border>
+        <Border BorderBrush="White" BorderThickness="2" Grid.Row="0" Grid.Column="1"></Border>
+        <Border BorderBrush="White" BorderThickness="2" Grid.Row="0" Grid.Column="2"></Border>
+        <Border BorderBrush="White" BorderThickness="2" Grid.Row="0" Grid.Column="3"></Border>
+        <Border BorderBrush="White" BorderThickness="2" Grid.Row="0" Grid.Column="4"></Border>
+        <Border BorderBrush="White" BorderThickness="2" Grid.Row="0" Grid.Column="5"></Border>
+        <Border BorderBrush="White" BorderThickness="2" Grid.Row="0" Grid.Column="6"></Border>
+        <Border BorderBrush="White" BorderThickness="2" Grid.Row="0" Grid.Column="7"></Border>
+
+
+        <Border Name="R1C0" BorderBrush="White" BorderThickness="1" Grid.Row="1" Grid.Column="0"></Border>
+        <Border Name="R1C1" BorderBrush="White" BorderThickness="1" Grid.Row="1" Grid.Column="1"></Border>
+        <Border Name="R1C2" BorderBrush="White" BorderThickness="1" Grid.Row="1" Grid.Column="2"></Border>
+        <Border Name="R1C3" BorderBrush="White" BorderThickness="1" Grid.Row="1" Grid.Column="3"></Border>
+        <Border Name="R1C4" BorderBrush="White" BorderThickness="1" Grid.Row="1" Grid.Column="4"></Border>
+        <Border Name="R1C5" BorderBrush="White" BorderThickness="1" Grid.Row="1" Grid.Column="5"></Border>
+        <Border Name="R1C6" BorderBrush="White" BorderThickness="1" Grid.Row="1" Grid.Column="6"></Border>
+        <Border Name="R1C7" BorderBrush="White" BorderThickness="1" Grid.Row="1" Grid.Column="7"></Border>
+        <Border Name="R2C0" BorderBrush="White" BorderThickness="1" Grid.Row="2" Grid.Column="0"></Border>
+        <Border Name="R2C1" BorderBrush="White" BorderThickness="1" Grid.Row="2" Grid.Column="1"></Border>
+        <Border Name="R2C2" BorderBrush="White" BorderThickness="1" Grid.Row="2" Grid.Column="2"></Border>
+        <Border Name="R2C3" BorderBrush="White" BorderThickness="1" Grid.Row="2" Grid.Column="3"></Border>
+        <Border Name="R2C4" BorderBrush="White" BorderThickness="1" Grid.Row="2" Grid.Column="4"></Border>
+        <Border Name="R2C5" BorderBrush="White" BorderThickness="1" Grid.Row="2" Grid.Column="5"></Border>
+        <Border Name="R2C6" BorderBrush="White" BorderThickness="1" Grid.Row="2" Grid.Column="6"></Border>
+        <Border Name="R2C7" BorderBrush="White" BorderThickness="1" Grid.Row="2" Grid.Column="7"></Border>
+
+        <TextBox Name="tbR1C1" Grid.Row="1" Grid.Column="1" Width="143" Height="300" HorizontalAlignment="Center" VerticalAlignment="Center" AcceptsReturn="True" Visibility="Hidden" Foreground="#FF075454" FontWeight="Bold"></TextBox>
+        <TextBox Name="tbR1C2" Grid.Row="1" Grid.Column="2" Width="143" Height="300" HorizontalAlignment="Center" VerticalAlignment="Center" AcceptsReturn="True" Visibility="Hidden" Foreground="#FF075454" FontWeight="Bold"></TextBox>
+        <TextBox Name="tbR1C3" Grid.Row="1" Grid.Column="3" Width="143" Height="300" HorizontalAlignment="Center" VerticalAlignment="Center" AcceptsReturn="True" Visibility="Hidden" Foreground="#FF075454" FontWeight="Bold"></TextBox>
+        <TextBox Name="tbR1C4" Grid.Row="1" Grid.Column="4" Width="143" Height="300" HorizontalAlignment="Center" VerticalAlignment="Center" AcceptsReturn="True" Visibility="Hidden" Foreground="#FF075454" FontWeight="Bold"></TextBox>
+        <TextBox Name="tbR1C5" Grid.Row="1" Grid.Column="5" Width="143" Height="300" HorizontalAlignment="Center" VerticalAlignment="Center" AcceptsReturn="True" Visibility="Hidden" Foreground="#FF075454" FontWeight="Bold"></TextBox>
+        <TextBox Name="tbR1C6" Grid.Row="1" Grid.Column="6" Width="143" Height="300" HorizontalAlignment="Center" VerticalAlignment="Center" AcceptsReturn="True" Visibility="Hidden" Foreground="#FF075454" FontWeight="Bold"></TextBox>
+        <TextBox Name="tbR1C7" Grid.Row="1" Grid.Column="7" Width="143" Height="300" HorizontalAlignment="Center" VerticalAlignment="Center" AcceptsReturn="True" Visibility="Hidden" Foreground="#FF075454" FontWeight="Bold"></TextBox>
+
+        <TextBox Name="tbR2C1" Grid.Row="2" Grid.Column="1" Width="143" Height="300" HorizontalAlignment="Center" VerticalAlignment="Center" AcceptsReturn="True" Visibility="Hidden" Foreground="#FF075454" FontWeight="Bold"></TextBox>
+        <TextBox Name="tbR2C2" Grid.Row="2" Grid.Column="2" Width="143" Height="300" HorizontalAlignment="Center" VerticalAlignment="Center" AcceptsReturn="True" Visibility="Hidden" Foreground="#FF075454" FontWeight="Bold"></TextBox>
+        <TextBox Name="tbR2C3" Grid.Row="2" Grid.Column="3" Width="143" Height="300" HorizontalAlignment="Center" VerticalAlignment="Center" AcceptsReturn="True" Visibility="Hidden" Foreground="#FF075454" FontWeight="Bold"></TextBox>
+        <TextBox Name="tbR2C4" Grid.Row="2" Grid.Column="4" Width="143" Height="300" HorizontalAlignment="Center" VerticalAlignment="Center" AcceptsReturn="True" Visibility="Hidden" Foreground="#FF075454" FontWeight="Bold"></TextBox>
+        <TextBox Name="tbR2C5" Grid.Row="2" Grid.Column="5" Width="143" Height="300" HorizontalAlignment="Center" VerticalAlignment="Center" AcceptsReturn="True" Visibility="Hidden" Foreground="#FF075454" FontWeight="Bold"></TextBox>
+        <TextBox Name="tbR2C6" Grid.Row="2" Grid.Column="6" Width="143" Height="300" HorizontalAlignment="Center" VerticalAlignment="Center" AcceptsReturn="True" Visibility="Hidden" Foreground="#FF075454" FontWeight="Bold"></TextBox>
+        <TextBox Name="tbR2C7" Grid.Row="2" Grid.Column="7" Width="143" Height="300" HorizontalAlignment="Center" VerticalAlignment="Center" AcceptsReturn="True" Visibility="Hidden" Foreground="#FF075454" FontWeight="Bold"></TextBox>
+
+
+
+    </Grid>
+
+</UserControl>

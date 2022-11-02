@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\icons8-barbell-48.png" />
+    <Resource Include="Images\icons8-chest-64.png" />
+    <Resource Include="Images\icons8-dumbbell-48.png" />
+    <Resource Include="Images\icons8-gym-48.png" />
+    <Resource Include="Images\icons8-learning-48.png" />
+    <Resource Include="Images\icons8-save-as-48.png" />
+    <Resource Include="Images\icons8-trainers-48.png" />
+    <Resource Include="Images\IMG_3821.JPEG" />
+    <Resource Include="Images\chest.png" />
+    <Resource Include="Images\back.png" />
+    <Resource Include="Images\arms.png" />
+    <Resource Include="Images\shoulder.png" />
+    <Resource Include="Images\abs.png" />
+    <Resource Include="Images\legs.png" />
+    <Resource Include="Images\cardio.png" />
+    <Resource Include="Images\SaveWorkout.png" />
+    <Resource Include="Images\Weight.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="MVVM\model\" />
+    <Folder Include="Images\" />
+  </ItemGroup>
+</Project>
